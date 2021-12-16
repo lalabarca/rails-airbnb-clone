@@ -12,6 +12,31 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "logo-karibhair" %>
+      <% end %>
+
+
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse">
+            <a class="nav-link" id="btn-blue" href="#"> All products</a>
+      </div>
+
+    </div>
+
+
     <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
