@@ -1,25 +1,44 @@
-.navbar-lewagon {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+nav {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  min-height: 8vh;
+  background-color: white;
+  font-family: 'poppins';
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+h4 {
+  color: black;
+  font-family: 'poppins';
+  letter-spacing: 2px;
+  margin-left: 30px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.list-link {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.list-link li {
+  font-size: 14px;
+  padding-left: 20px;
+}
+.list-link a {
+  text-decoration: none;
+  color: black;
+}
+.list-icons {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-right: 30px;
+  text-decoration: none;
 }
 
-.navbar-nav li {
-font-size: 20px;
-padding-left: 20px;
-color: #F8CD9A;
-}
-
-#btn-blue {
-text-decoration: none;
-color: white;
-background-color: #00A9C8;
-border-radius: 20px;
+.list-icons a {
+  font-size: 20px;
+  padding-left: 20px;
+  color: black;
 }
