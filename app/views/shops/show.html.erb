@@ -45,7 +45,7 @@
       <h2>Nos produits</h2>
       <div class="row mt-5 ">
         <% @shop.products.each do |product| %>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
            <%= link_to product_path(product), class:"link-product" do %>
             <div class="card card-product">
               <%= image_tag product.image_url %>
