@@ -13,6 +13,8 @@ User.destroy_all
 user1 = User.create!(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçant", password: "123456")
 user2 = User.create!(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçant", password: "123456")
 user3 = User.create!(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçant", password: "123456")
+user2 = User.create(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçant", password: "123456")
+user3 = User.create(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçant", password: "123456")
 
 shops1 = Shop.create!(user: user1,
 brand_name: "Flose",
@@ -77,71 +79,66 @@ description: "Purifiez votre cuir chevelu sensible en un instant avec le Sunshin
 Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.
 En quelques semaines, les pellicules ont considérablement diminué et vos cheveux retrouvent leur éclat.",
 category: "Shampoing",
-price: "4.30",
+price: "4.99",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-bubble-dream_1200x.jpg?v=1616856342")
 
 product = Product.create(shop:shops2,
-  name:"Huile croissance",
-  description: "Prenez soin de vos cheveux avec ce Sérum Croissance des Secrets de Loly. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine.",
+name:"Huile croissance",
+description: "Prenez soin de vos cheveux avec ce Sérum Croissance des Secrets de Loly. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine.",
 category: "Huile",
 price: "17.95",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-serum-croissance_1000x.jpg?v=1616918163")
 
 product = Product.create(shop:shops3,
-  name:"Shampoing Sunshine Clean",
-  description: "Façonnez un nuage de bulles sur la tête de votre tout petit avec le shampoing Bubble Dream des Secrets de Loly.
-Ce shampoing doux permet de nettoyer les impuretés en douceur tout en assouplissant les cheveux grâce à une formule comprenant de la pomme et du lait d’amande.",
+name:"Shampoing Sunshine Clean",
+description: "Façonnez un nuage de bulles sur la tête de votre tout petit avec le shampoing Bubble Dream des Secrets de Loly. Ce shampoing doux permet de nettoyer les impuretés en douceur tout en assouplissant les cheveux grâce à une formule comprenant de la pomme et du lait d’amande.",
 category: "Shampoing",
 price: "25",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-sunshine-clean_1200x.jpg?v=1616918541")
 
 product = Product.create(shop:shops4,
-  name:"Shampoing cheveux gras",
-  description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.",
+name:"Shampoing cheveux gras",
+description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.",
 category: "Shampoing",
-price: "14",
+price: "14.99",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-sunshine-clean_1200x.jpg?v=1616918541")
 
-product = Product.create(shop:shops4,
-  name:"Masque soins",
-  description: "Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable.
-Véritable concentré de vitamines et d’ingrédients naturels, ce masque nourrit les cheveux intensément tout en les fortifiant.",
-category: "Masque",
-price: "14",
-image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-repair-time_1200x.jpg?v=1616918053")
+product = Product.create(shop:shops4, name:"Masque soins",
+  description: "Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable. Véritable concentré de vitamines et d’ingrédients naturels, ce masque nourrit les cheveux intensément tout en les fortifiant.",category: "Masque",price: "34.99",
+  image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-repair-time_1200x.jpg?v=1616918053")
 
 product = Product.create(shop:shops5, name:"Sampoing doux",
-   description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.", category: "Shampoing", price: "17.80",
-   image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/boucleme-colorful-black-curl-cleanser-1l_800x.jpg?v=1603993374")
+  description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.", category: "Shampoing", price: "20.99",
+  image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/boucleme-colorful-black-curl-cleanser-1l_800x.jpg?v=1603993374")
 
 product = Product.create(shop:shops5, name:"Masque au beurre de karité",
-description:"Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable.", category: "Masque", price: "17.80",
-image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/2807_800x.jpg?v=1602775085")
+  description:"Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable.", category: "Masque", price: "17.99",
+  image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/2807_800x.jpg?v=1602775085")
 
 product = Product.create(shop:shops5, name:"Huile de carapate",
-   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "Huile", price: "17.80",
+   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "Huile", price: "16.65",
    image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/3341_600x.jpg?v=1602776710")
 
   product = Product.create(shop:shops5, name:"Huile réparatrice",
-   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "Huile", price: "17.80",
+   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "Huile", price: "17.85",
    image_url:"https://nayad.fr/wp-content/uploads/2020/10/serum-reparateur250-600x600.png")
 
    product = Product.create(shop:shops5, name:"Beurre au chanvre et moringa",
-   description: "Ce beurre fondand est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "17.80",
+   description: "Ce beurre fondant est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "19.99",
    image_url:"https://nayad.fr/wp-content/uploads/2021/06/PHOTO-2021-05-28-11-53-30-768x768.jpg")
 
    product = Product.create(shop:shops5, name:"Beurre cactus",
-   description: "Ce berure fondand est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "17.80",
+   description: "Ce beurre fondant est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "7.85",
    image_url:"https://nayad.fr/wp-content/uploads/2020/10/creme-cactus-600x600.png")
 
    product = Product.create(shop:shops5, name:"Beurre de mangue",
-   description: "Ce berure fondand est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "17.80",
+   description: "Ce beurre fondant est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "15.99",
    image_url:"https://nayad.fr/wp-content/uploads/2021/04/beurre-mangue-400x400.png")
 
      product = Product.create(shop:shops5, name:"Beurre d'avocat",
-   description: "Ce berure fondand est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "17.80",
+   description: "Ce beurre fondant est composé d’huiles végétales et extraits de plantes choisis pour leur propriétés exceptionnelles redonnant vie, force et vigueur à la peau et aux cheveux fins, secs, cassants, fourchus et abîmés", category: "Beurre", price: "10.85",
    image_url:"https://nayad.fr/wp-content/uploads/2021/02/beurre-avocat-600x600.png")
 
    product = Product.create(shop:shops5, name:"Masque protecteur hydratant",
-   description: "Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable.", category: "Masque", price: "17.80",
+   description: "Pour un traitement intense, le masque Repair Time des Secrets de Loly est un produit incontournable.", category: "Masque", price: "17.85",
    image_url:"https://nayad.fr/wp-content/uploads/2021/04/mpmh-600x600.png")
