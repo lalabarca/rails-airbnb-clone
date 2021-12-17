@@ -1,0 +1,42 @@
+.seller {
+  background-color: $l-first;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+.brand-details {
+  h2 {
+    padding-bottom: 1rem;
+  }
+  article span  {
+    border-bottom: 2px solid $second;
+    padding-bottom: 5px;
+  }
+
+  aside {
+      p i{
+      margin-right: 1rem;
+      color: $third;
+      font-size: 1.5rem;
+    }
+    ul {
+      padding: 0;
+      display: flex;
+      li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        color: white;
+        margin-right: 1.2rem;
+        background-color: $gray;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
