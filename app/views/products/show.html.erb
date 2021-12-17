@@ -1,13 +1,23 @@
-<h1> </h1>
-<div class="card-product">
-  <div class="img-product">
-  <%= image_tag @product.image_url, alt: "image-produit" %>
+<div class="card-product row">
+  <div class="col-12 col-md-7">
+    <div class="img-product">
+      <%= image_tag @product.image_url, alt: "image-produit" %>
+    </div>
   </div>
-  <div class="card-product-infos">
-    <h2> <%=@product.name %></h2>
-    <h3><%=@product.shop.brand_name %></h3>
-    <p><%= @product.price  %>€</p> <div class="h_line"></div>
-    <p><%= @product.description  %></p>
-    <a href="#" class="btn btn-primary">Ajouter au panier</a>
+  <div class="col-12 col-md-4">
+    <div class="card-product-infos">
+      <h2> <%=@product.name %></h2>
+      <h3><%=@product.shop.brand_name %></h3>
+      <p><%= @product.price  %>€</p> <div class="h_line"></div>
+      <p><%= @product.description  %></p>
+      <div class="flex-between">
+        <div class="actions">
+          <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+          <span id="counter" data-count="1">1</span>
+          <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+        </div>
+      </div>
+      <%= link_to "Ajouter au panier", product_transactions_path(@product), method: :post, class: "mt-3 btn btn-primary" %>
+    </div>
   </div>
 </div>

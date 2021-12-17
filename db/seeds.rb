@@ -10,9 +10,9 @@ Product.destroy_all
 Shop.destroy_all
 User.destroy_all
 
-user1 = User.create(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçante", password: "123456")
-user2 = User.create(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçante", password: "123456")
-user3 = User.create(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçante", password: "123456")
+user1 = User.create!(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçant", password: "123456")
+user2 = User.create!(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçant", password: "123456")
+user3 = User.create!(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçant", password: "123456")
 
 shops1 = Shop.create!(user: user1,
 brand_name: "Flose",
