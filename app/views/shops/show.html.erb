@@ -1,35 +1,36 @@
-<div class="banner-shop" style="background-image: linear-gradient(rgba(249, 203, 156,0.2),rgba(230, 145, 56 ,0.4)), url(https://source.unsplash.com/lH973Qz0Iy4/1600x900);">
+<div class="banner-shop" style="background-image: linear-gradient(rgba(249, 203, 156, 0.3),rgba(246, 176, 0, 0.5)), url(<%= @shop.banner_url%>);">
   <div class="container">
     <figure id="logo-shop">
-       <%= image_tag "test-logo.png" %>
+       <%= image_tag @shop.logo_url, alt: "logo de la boutique" %>
     </figure>
-    <h1>XO Nappy</h1>
+    <h1><%= @shop.brand_name.capitalize %></h1>
   </div>
 </div>
 <main>
-  <section class="seller row">
-    <div class="container">
-      <figure>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+  <section class="seller row py-4">
+    <div class="container d-flex flex-column align-items-center">
+      <figure class="avatar-shop">
+        <%= image_tag @shop.avatar_url, alt: "photo commerçant" %>
       </figure>
-      <h3>Nadine MARIN</h3>
+      <h3><%= @shop.user.first_name %> <%= @shop.user.last_name %></h3>
+      <p><%= @shop.user.status.capitalize %></p>
     </div>
   </section>
-  <section class="row brand-details">
-    <div class="container">
-      <div class="col-12 col-md-8">
+  <section class="row brand-details py-5">
+    <div class="container d-flex justify-content-between">
+      <div class="col-12 col-md-6 rounded-3 shadow-sm py-4 px-5">
         <article>
-          <h2>Notre marque</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quas velit accusantium vero beatae cumque mollitia sit qui soluta officia, facilis inventore earum. Adipisci voluptate harum ullam eligendi. Vero, ipsam.</p>
+          <h2><span>Notre marque</span></h2>
+          <p><%= @shop.description %></p>
         </article>
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-5 rounded-3 shadow-sm py-4 px-5">
         <aside>
-          <h2>Nous contactez</h2>
-          <p><i class="fas fa-map-marker-alt"></i></p>
-          <p><i class="fas fa-phone-alt"></i></p>
-          <p><i class="fas fa-envelope"></i></p>
-          <p><a href="#">www.xo-nappy.fr</a></p>
+          <h2><span>Nous contactez</span></h2>
+          <p><i class="fas fa-map-marker-alt"></i><%= @shop.address %></p>
+          <div id="map" style="width: 100%; height: 200px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          <p><i class="fas fa-phone-alt"></i><%= @shop.telephone %></p>
+          <p><i class="fas fa-envelope"></i><%= @shop.user.email %></p>
           <p>Nos réseaux sociaux</p>
           <ul>
             <li><i class="fab fa-facebook-f"></i></li>
@@ -40,18 +41,22 @@
       </div>
     </div>
   </section>
-  <section class="row brand-product">
+  <section class="row brand-products bg-light py-5">
     <div class="container">
       <h2>Nos produits</h2>
-      <div class="row">
-        <div class="col-6 col-md-3">
-          <figure class="product-img">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm" %>
-          </figure>
-          <h3>Shampooing</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p><strong>13€</strong></p>
-        </div>
+      <div class="row mt-5 ">
+        <% @shop.products.each do |product| %>
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+           <%= link_to product_path(product), class:"link-product" do %>
+            <div class="card card-product">
+              <%= image_tag product.image_url %>
+                <h3 class="card-title"><%= product.name %></h3>
+                <p class="card-text"><%= product.description.truncate(60) %></p>
+                <p class="price"><strong><%= product.price %> €</strong></p>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
   </section>

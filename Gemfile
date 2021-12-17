@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # authentication
 gem 'devise'
+
+# geolocalisation shops
+gem 'geocoder'
