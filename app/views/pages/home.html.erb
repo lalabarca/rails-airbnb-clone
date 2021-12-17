@@ -17,11 +17,12 @@
       <h2>Les produits du moment</h2>
       <div class="row mt-5">
          <% @products.first(4).each do |product| %>
-          <div class="col-12 col-md-6 col-lg-3 mb-4 flex-fill">
-           <%= link_to product_path(product), class:"link-product" do %>
-            <div class="card card-product">
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <%= link_to product_path(product), class:"link-product" do %>
+            <div class="card">
               <%= image_tag product.image_url %>
                 <h3 class="card-title"><%= product.name %></h3>
+                <p class="card-text"><%= product.category %></p>
                 <p class="card-text"><%= product.description.truncate(60) %></p>
                 <p class="price"><strong><%= product.price %> €</strong></p>
             </div>
