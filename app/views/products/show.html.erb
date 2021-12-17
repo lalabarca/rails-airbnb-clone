@@ -1,0 +1,13 @@
+<h1> </h1>
+<div class="card-product">
+  <div class="img-product">
+  <%= image_tag @product.image_url, alt: "image-produit" %>
+  </div>
+  <div class="card-product-infos">
+    <h2> <%=@product.name %></h2>
+    <h3><%=@product.shop.brand_name %></h3>
+    <p><%= @product.price  %>€</p> <div class="h_line"></div>
+    <p><%= @product.description  %></p>
+    <a href="#" class="btn btn-primary">Ajouter au panier</a>
+  </div>
+</div>
