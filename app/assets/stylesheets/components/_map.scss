@@ -1,0 +1,15 @@
+#map {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.2);
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
