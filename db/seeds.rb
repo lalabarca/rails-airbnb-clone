@@ -8,7 +8,7 @@
 
 Product.destroy_all
 Shop.destroy_all
-user = User.create(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "client", password: "123456")
+user = User.create(email:"laurah@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçant", password: "123456")
 
 
 shops1 = Shop.create!(user: user, brand_name: "flose", description: " hydratés, fortifiés et démêlés en douceur.
