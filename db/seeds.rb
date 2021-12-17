@@ -8,6 +8,8 @@
 
 Product.destroy_all
 Shop.destroy_all
+User.destroy_all
+
 user1 = User.create(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçante", password: "123456")
 user2 = User.create(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçante", password: "123456")
 user3 = User.create(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçante", password: "123456")
@@ -15,7 +17,7 @@ user3 = User.create(email:"clara@gmail.com" , first_name: "Clara", last_name: "H
 shops1 = Shop.create!(user: user1,
 brand_name: "Flose",
 description: "Créatrice de la marque en 2009, Loly, de son vrai nom Kelly, est passionnée de cosmétiques naturels home made depuis toujours et a à cœur d’aider les femmes et les hommes à prendre soin de leurs cheveux texturés. D’abord gestionnaire d’un blog de conseils bouclesetcotons.fr et d’un forum tous deux dédiés aux cheveux ondulés, frisés, crépus et bouclés, Loly a rapidement compris le besoin de ces types de cheveux. Avec près de 100 000 membres sur son forum qui échangent chaque jour sur la beauté noire et métissée, les produits au naturel et l’appropriation de leurs cheveux, Loly a très vite eu envie d’aller plus loin : mettre à la disposition de toutes ces personnes aux cheveux texturés, des produits naturels et de qualité. D’une passion des cosmétiques et produits sains, et d’une volonté de répondre à un besoin grandissant : voilà comment Les Secrets de Loly est née !",
-address: "Centre commercial de pl d'Armes 97232 lamentin Martinique ",
+address: "Centre commercial de pl d'Armes lamentin Martinique ",
 telephone: "0690 00 70 40",
 banner_url:"https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1845&q=80",
 logo_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVt8vGWRcjBv3qgKxKHtergAhXAe0jELnnkA&usqp=CAU",
@@ -91,14 +93,14 @@ product = Product.create(shop:shops3,
   name:"Shampoing Sunshine Clean",
   description: "Façonnez un nuage de bulles sur la tête de votre tout petit avec le shampoing Bubble Dream des Secrets de Loly.
 Ce shampoing doux permet de nettoyer les impuretés en douceur tout en assouplissant les cheveux grâce à une formule comprenant de la pomme et du lait d’amande.",
-category: "Sampoing",
+category: "Shampoing",
 price: "25",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-sunshine-clean_1200x.jpg?v=1616918541")
 
 product = Product.create(shop:shops4,
   name:"Shampoing cheveux gras",
   description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.",
-category: "Shampooing",
+category: "Shampoing",
 price: "14",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-sunshine-clean_1200x.jpg?v=1616918541")
 
@@ -111,7 +113,7 @@ price: "14",
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/les-secrets-de-loly-colorful-black-repair-time_1200x.jpg?v=1616918053")
 
 product = Product.create(shop:shops5, name:"Sampoing doux",
-   description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.", category: "Sampoing", price: "17.80",
+   description: "Ce shampoing au doux parfum de citron et de grenade nettoie vos cheveux en douceur, avec une attention toute particulière pour votre cuir chevelu sensible et irrité.", category: "Shampoing", price: "17.80",
    image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/boucleme-colorful-black-curl-cleanser-1l_800x.jpg?v=1603993374")
 
 product = Product.create(shop:shops5, name:"Masque au beurre de karité",
@@ -119,7 +121,7 @@ description:"Pour un traitement intense, le masque Repair Time des Secrets de Lo
 image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/2807_800x.jpg?v=1602775085")
 
 product = Product.create(shop:shops5, name:"Huile de carapate",
-   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "huile", price: "17.80",
+   description: "Prenez soin de vos cheveux avec cette huile de crapate. Concentré en actifs d’origine végétales et huiles, ce sérum agit sur la fibre capillaire pour la rendre plus forte, plus brillante et ainsi favoriser une pousse plus rapide et plus saine", category: "Huile", price: "17.80",
    image_url:"https://cdn.shopify.com/s/files/1/0478/0821/7241/products/3341_600x.jpg?v=1602776710")
 
   product = Product.create(shop:shops5, name:"Huile réparatrice",
