@@ -1,19 +1,20 @@
+
+<div class= "container">
+<h1>Nos produits</h1>
+<div class= "row mt-5">
 <% @products.each do |product| %>
-
-    <div class="container">
-      <div class="row">
-      <div class="col-6 col-md-3">
-        <div class="card" style="width: 18rem;">
-          <%= image_tag product.image_url, class: "card-img-top" %>
-          <div class="card-body">
-              <h2 class="card-title"><%= product.shop.brand_name%></h2>
-              <p class="card-text"><%= product.description %></p>
-              <p class="card-text"><%= product.price %></p>
-              <p class="card-text"><%= product.name%></p>
-              <p class="card-text"><%= product.category%></p>
-          </div>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-3 mb-4">
+<%= link_to product_path(product), class: "link_product" do  %>
+<div class="card" >
+    <%= image_tag product.image_url %>
+    <div class="card-body">
+        <h2 class="card-title"><%= product.name%></h2>
+        <p class="card-text"><%= product.category%></p>
+        <p class="card-text"><%= description.truncate(60) %></p>
+        <p class="price"><strong><%= product.price %>€</strong></p>
     </div>
-
 <% end %>
+</div>
+<% end %>
+</div>
+</div>
