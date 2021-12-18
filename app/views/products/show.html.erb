@@ -1,23 +1,27 @@
-<div class="card-product row">
-  <div class="col-12 col-md-7">
-    <div class="img-product">
-      <%= image_tag @product.image_url, alt: "image-produit" %>
+<main>
+  <div class="container py-5">
+  <div class="card-product row">
+    <div class="col-12 col-md-8">
+      <figure class="img-product">
+        <%= image_tag @product.image_url, alt: "photo produit" %>
+      </figure>
     </div>
-  </div>
-  <div class="col-12 col-md-4">
-    <div class="card-product-infos">
-      <h2> <%=@product.name %></h2>
-      <h3><%=@product.shop.brand_name %></h3>
-      <p><%= @product.price  %>€</p> <div class="h_line"></div>
-      <p><%= @product.description  %></p>
-      <div class="flex-between">
-        <div class="actions">
-          <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
-          <span id="counter" data-count="1">1</span>
-          <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+    <div class="col-12 col-md-4">
+      <div class="card-product-infos">
+        <h1><%=@product.name %></h1>
+        <h2><%=@product.shop.brand_name %></h2>
+        <p class="price-product"><strong><%= @product.price  %>€</strong></p>
+        <p class="border-top border-dark py-3"><%= @product.description %></p>
+        <div class="flex-between">
+          <div class="actions">
+            <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+            <span id="counter" data-count="1">1</span>
+            <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+          </div>
         </div>
+        <%= link_to "Ajouter au panier", product_transactions_path(@product), method: :post, class: "mt-3 btn btn-primary" %>
       </div>
-      <%= link_to "Ajouter au panier", product_transactions_path(@product), method: :post, class: "mt-3 btn btn-primary" %>
     </div>
   </div>
 </div>
+</main>

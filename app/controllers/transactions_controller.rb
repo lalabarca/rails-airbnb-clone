@@ -10,7 +10,6 @@ class TransactionsController < ApplicationController
     @user = current_user
     @transaction.product = @product
     @transaction.user = @user
-    # @transaction.quantity =
     @transaction.price = @product.price * @transaction.quantity
   end
 end
