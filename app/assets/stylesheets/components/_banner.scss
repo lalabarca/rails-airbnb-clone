@@ -43,12 +43,11 @@
       font: 3.2rem $headers-font;
       font-weight: 700;
       font-style: italic;
-      line-height: 4rem;
+      line-height: 3.7rem;
       margin-right: 1.4rem;
 
       span {
         position: absolute;
-        overflow: hidden;
         opacity: 0;
         letter-spacing: -1px;
         -webkit-animation: textSlider 20s linear infinite;
@@ -97,5 +96,15 @@
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-weight: 700;
+  }
+}
+
+@media (max-width: "770px") {
+  .banner .titre {
+    flex-direction: column;
+    .text-slide {
+      align-items: center;
+      margin-right: 0;
+    }
   }
 }
