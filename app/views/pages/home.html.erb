@@ -1,6 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(249, 203, 156,0.2),rgba(230, 145, 56 ,0.4)), url(https://source.unsplash.com/lH973Qz0Iy4/1600x900);">
   <div class="container">
-    <h1>Produits capillaires de chez nous</h1>
+    <div class="titre">
+          <div class="text-slide">
+            <span>Shampoings</span>
+            <span>Masques</span>
+            <span>Huiles</span>
+            <span>Beurres</span>
+          </div>
+          <h1>de chez nous</h1>
+        </div>
     <p>Prenez soin de vos cheveux avec des produits caribéens</p>
      <div class="row justify-content-center">
         <div class="col-8">
@@ -20,7 +28,7 @@
           <div class="col-12 col-md-6 col-lg-3 mb-4">
           <%= link_to product_path(product), class:"link-product" do %>
             <div class="card">
-              <%= image_tag product.image_url %>
+              <%= image_tag product.image_url, alt: "photo #{product.name}" %>
                 <h3 class="card-title"><%= product.name %></h3>
                 <p class="card-text"><%= product.category %></p>
                 <p class="card-text"><%= product.description.truncate(60) %></p>
