@@ -4,31 +4,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
   min-height: 8vh;
-  background-color: white;
   font-family: 'poppins';
   box-shadow: 0 1px 8px rgba($color: #000000, $alpha: 0.4);
 }
 
-h4 {
+#logo a {
   color: black;
   font-family: 'poppins';
   letter-spacing: 2px;
   margin-left: 30px;
-}
-
-.list-link {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-}
-.list-link li {
-  font-size: 14px;
-  padding-left: 20px;
-}
-.list-link a {
-  text-decoration: none;
-  color: black;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .list-icons {
@@ -39,8 +27,14 @@ h4 {
   text-decoration: none;
 }
 
-.list-icons a {
-  font-size: 20px;
+.nav-link {
+  font-size: 18px;
   padding-left: 20px;
   color: black;
+  text-decoration: none;
+
+}
+
+.nav-link:hover {
+  color: #F8CC9B;
 }
