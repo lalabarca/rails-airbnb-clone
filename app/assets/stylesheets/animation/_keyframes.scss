@@ -1,0 +1,28 @@
+// Translation texte page d'accueil
+@keyframes textSlider {
+ 0% {
+  opacity:0;
+  -webkit-transform:translateY(20px);
+  transform:translateY(20px)
+ }
+ 1% {
+  opacity:1;
+  -webkit-transform:translateY(0);
+  transform:translateY(0)
+ }
+ 19% {
+  opacity:1;
+  -webkit-transform:translateY(0);
+  transform:translateY(0)
+ }
+ 20% {
+  opacity:0;
+  -webkit-transform:translateY(-20px);
+  transform:translateY(-20px)
+ }
+ 100% {
+  opacity:0;
+  -webkit-transform:translateY(-20px);
+  transform:translateY(-20px)
+ }
+}
