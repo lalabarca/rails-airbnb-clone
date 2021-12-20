@@ -1,0 +1,24 @@
+.card {
+  box-shadow: 0 1px 8px rgba ($color: #000000, $alpha: 0.4);
+}
+
+.card {
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba ($color: #000000, $alpha: 0.4);
+  min-height: 300px;
+  justify-content: center;
+}
+
+
+img.cercle{
+  border-radius: 50%;
+  object-fit: cover;
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+  h3 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
