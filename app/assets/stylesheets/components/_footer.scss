@@ -1,11 +1,13 @@
 footer {
   background: $dark;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 100px;
-  padding: 0px 50px;
   color: white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .footer-links {
     display: flex;
@@ -22,4 +24,9 @@ footer {
       }
     }
   }
+
+  p {
+    margin: 0;
+  }
+
 }
