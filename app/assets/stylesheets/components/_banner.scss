@@ -23,6 +23,59 @@
   }
 }
 
+// animation translation H1 HOMEPAGE
+.titre {
+    display: flex;
+    margin-bottom: 5rem;
+    color: white;
+
+    .text-slide {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 45%;
+      max-width: 500px;
+      min-height: 4.85rem;
+      font: 4.8rem $headers-font;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 4.85rem;
+
+      span {
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+        letter-spacing: -1px;
+        -webkit-animation: textSlider 20s linear infinite;
+        animation: textSlider 20s linear infinite;
+
+        &:nth-child(1) {
+         -webkit-animation-delay:-20s;
+         animation-delay:-20s
+        }
+        &:nth-child(2) {
+         -webkit-animation-delay:-15s;
+         animation-delay:-15s
+        }
+        &:nth-child(3) {
+         -webkit-animation-delay:-10s;
+         animation-delay:-10s
+        }
+        &:nth-child(4) {
+         -webkit-animation-delay:-5s;
+         animation-delay:-5s
+        }
+      }
+    }
+
+    h1 {
+      font: 4.5rem $headers-font;
+      margin: 0;
+      line-height: 5rem;
+    }
+  }
+
+
 .banner-shop {
   background-size: cover;
   background-position: center;
