@@ -25,15 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 
-// Import STIMULUS
-import { Application } from "stimulus";
-import { definitionsFromContext } from "stimulus/webpack-helpers";
-
-const application = Application.start();
-const context = require.context("./controllers", true, /\.js$/);
-application.load(definitionsFromContext(context));
-
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
@@ -45,3 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   quantity();
 });
+
+import "controllers"

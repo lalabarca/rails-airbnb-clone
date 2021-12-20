@@ -11,11 +11,12 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new
     @transaction.product = @product
     @transaction.user = @user
-    @transaction.price = @product.price * @transaction.quantity
-    if @transaction.save!
-      redirect_to "products/index"
+    @transaction.quantity = params[:count]
+    @transaction.price = (@transaction.quantity * @product.price).round(2)
+    if @transaction.save
+      redirect_to products_path
     else
-      redirect_to "products/show"
+      redirect_to product_path(@product)
     end
   end
 end
