@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   resources :shops, only: [:show]
+  resources :transactions, only: [:index, :destroy]
 end
