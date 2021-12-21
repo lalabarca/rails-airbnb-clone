@@ -10,15 +10,18 @@ Product.destroy_all
 Shop.destroy_all
 User.destroy_all
 
-user1 = User.create!(email:"catia@gmail.com" , first_name: "Laura", last_name: "Hardy", status: "commerçant", password: "123456")
+user1 = User.create!(email:"nadine@gmail.com" , first_name: "Nadine", last_name: "Nardol", status: "commerçant", password: "123456")
 user2 = User.create!(email:"kelly@gmail.com" , first_name: "Kelly", last_name: "Massol", status: "commerçant", password: "123456")
 user3 = User.create!(email:"clara@gmail.com" , first_name: "Clara", last_name: "Hamely", status: "commerçant", password: "123456")
 
-shops1 = Shop.create!(user: user1, brand_name: "Flose", description: "Créatrice de la marque en 2009, Loly, de son vrai nom Kelly, est passionnée de cosmétiques naturels home made depuis toujours et a à cœur d’aider les femmes et les hommes à prendre soin de leurs cheveux texturés. D’abord gestionnaire d’un blog de conseils bouclesetcotons.fr et d’un forum tous deux dédiés aux cheveux ondulés, frisés, crépus et bouclés, Loly a rapidement compris le besoin de ces types de cheveux. Avec près de 100 000 membres sur son forum qui échangent chaque jour sur la beauté noire et métissée, les produits au naturel et l’appropriation de leurs cheveux, Loly a très vite eu envie d’aller plus loin : mettre à la disposition de toutes ces personnes aux cheveux texturés, des produits naturels et de qualité. D’une passion des cosmétiques et produits sains, et d’une volonté de répondre à un besoin grandissant : voilà comment Les Secrets de Loly est née !", address: "Place d'Armes, Lamentin, Martinique", telephone: "0690 00 70 40", banner_url:"https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1845&q=80", logo_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVt8vGWRcjBv3qgKxKHtergAhXAe0jELnnkA&usqp=CAU", avatar_url:"https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80")
+shops1 = Shop.create!(user: user1, brand_name: "Flose", description: "Créatrice de la marque en 2009, Loly, de son vrai nom Kelly, est passionnée de cosmétiques naturels home made depuis toujours et a à cœur d’aider les femmes et les hommes à prendre soin de leurs cheveux texturés. D’abord gestionnaire d’un blog de conseils bouclesetcotons.fr et d’un forum tous deux dédiés aux cheveux ondulés, frisés, crépus et bouclés, Loly a rapidement compris le besoin de ces types de cheveux. Avec près de 100 000 membres sur son forum qui échangent chaque jour sur la beauté noire et métissée, les produits au naturel et l’appropriation de leurs cheveux, Loly a très vite eu envie d’aller plus loin : mettre à la disposition de toutes ces personnes aux cheveux texturés, des produits naturels et de qualité. D’une passion des cosmétiques et produits sains, et d’une volonté de répondre à un besoin grandissant : voilà comment Les Secrets de Loly est née !", address: "Place d'Armes, Lamentin, Martinique", telephone: "0690 00 70 40",
+banner_url:"https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1845&q=80",
+logo_url:"https://media.istockphoto.com/vectors/african-american-woman-face-profile-hair-curly-logo-beauty-women-vector-id1285132647?k=20&m=1285132647&s=612x612&w=0&h=hX2OmRwfCSDBnGoZd7M8u3LWPW6nV21TExu0WiTyfgE=",
+avatar_url:"https://images.unsplash.com/photo-1507152832244-10d45c7eda57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80")
 
 shops2 = Shop.create!(user: user1,
 brand_name: "Baume Iles",
-description: "Créatrice de la marque en 2009, Loly, de son vrai nom Kelly, est passionnée de cosmétiques naturels home made depuis toujours et a à cœur d’aider les femmes et les hommes à prendre soin de leurs cheveux texturés.",
+description: "Créatrice de la marque en 2009, Lola, de son vrai nom Laura, est passionnée de cosmétiques naturels home made depuis toujours et a à cœur d’aider les femmes et les hommes à prendre soin de leurs cheveux texturés.",
 address:"Route Du Lamentin, Fort-de-France" ,
 telephone: "0873801009",
 banner_url:"https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
@@ -26,11 +29,16 @@ logo_url:"https://i.etsystatic.com/12076327/r/il/297e8d/1584943738/il_1588xN.158
 avatar_url:"https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80")
 
 shops3 = Shop.create!(user: user2, brand_name: "Oils Nature",
-description: "Oils Nature a été spécialement conçue pour répondre à une demande de plus en plus croissante des femmes des Antilles et de la Guyane. Leur désir d’obtenir des réponses adaptées à leur problématique capillaire, d’avoir des conseils et d’être livré à leur domicile à moindre frais a donné naissance à cet espace.", address:"Fort-de-France, Martinique", telephone: "0590363940", banner_url:"https://images.unsplash.com/profile-1582795063523-f92a89921286image?dpr=1&auto=format&fit=crop&w=150&h=150&q=60&crop=faces&bg=fff", logo_url:"https://i.etsystatic.com/27994523/r/il/6884f2/3424803479/il_794xN.3424803479_5vso.jpg", avatar_url:"https://images.unsplash.com/photo-1506956191951-7a88da4435e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80")
+description: "Oils Nature a été spécialement conçue pour répondre à une demande de plus en plus croissante des femmes des Antilles et de la Guyane. Leur désir d’obtenir des réponses adaptées à leur problématique capillaire, d’avoir des conseils et d’être livré à leur domicile à moindre frais a donné naissance à cet espace.", address:"Fort-de-France, Martinique", telephone: "0590363940",
+banner_url:"https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+logo_url:"https://images-platform.99static.com/kPom3dUGULp7MLRQTs9qc39wv7g=/253x0:1493x1240/500x500/top/smart/99designs-contests-attachments/63/63934/attachment_63934779",
+avatar_url:"https://images.unsplash.com/photo-1611432579699-484f7990b127?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80")
 
 shops4 = Shop.create!(user: user3, brand_name: "Chantilym",
 description: "D’une passion des cosmétiques et produits sains, et d’une volonté de répondre à un besoin grandissant : voilà comment Chantilym est née !", address: "41 Rue Des Dalhias, Cayenne", telephone:'0594003058',
-banner_url:"https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80", logo_url:"https://cdn1.vectorstock.com/i/1000x1000/82/60/cosmetic-beauty-logo-design-vector-28158260.jpg", avatar_url:"https://images.unsplash.com/photo-1589317621382-0cbef7ffcc4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80")
+banner_url:"https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+logo_url:"https://dcassetcdn.com/design_img/518585/71450/71450_3636031_518585_image.jpg",
+avatar_url:"https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80")
 
 shops5 = Shop.create!(user: user3, brand_name: "Shampooing Luxe",
 description: "Nous proposons une sélection de produits de soins alliant composants naturels et haute technicité de fabrication.
@@ -49,7 +57,7 @@ D’une passion des cosmétiques et produits sains, et d’une volonté de répo
 address: "Les Abymes, Guadeloupe",
 telephone: "0696602040",
 banner_url:"https://cdn.shopify.com/s/files/1/0555/6197/8056/files/histoire-loly.jpg?v=1629797877",
-logo_url:"https://cdn.shopify.com/s/files/1/0555/6197/8056/files/logo-les-secrets-de-loly_270x@2x.png?v=1623840879",
+logo_url:"http://cdn.shopify.com/s/files/1/0414/5070/0957/collections/les-secrets-de-loly-logo_1200x1200.jpg?v=1617898169",
 avatar_url:"https://images.unsplash.com/photo-1612115958726-9af4b6bd28d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80")
 
 product = Product.create(shop: shops1,

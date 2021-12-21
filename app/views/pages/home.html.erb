@@ -11,10 +11,17 @@
         </div>
     <p>Prenez soin de vos cheveux avec des produits caribéens</p>
      <div class="row justify-content-center">
-        <div class="col-8">
-          <form class="sb-example-3 mt-4">
-            <input class="search__input" type="text" placeholder="Je recherche...">
-          </form>
+        <div class="col-6">
+          <%= form_tag products_path, class: "form-search", method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "sb-example-3",
+              placeholder: "Je recherche..."
+            %>
+            <%= button_tag type:"submit", class: "btn-blue" do %>
+            <i class="fas fa-search"></i>
+            <% end %>
+          <% end %>
         </div>
      </div>
   </div>
