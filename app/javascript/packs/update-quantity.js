@@ -16,7 +16,7 @@ const updateForm = (event) => {
   if (count >= 1) {
     updateCounter(counter, count);
     modalQuantity.innerText = count;
-    modalPrice.innerText = count * price;
+    modalPrice.innerText = `${(count * price).toFixed(2)} €`;
 
   } else {
     event.preventDefault();

@@ -13,6 +13,7 @@ class TransactionsController < ApplicationController
     @transaction.user = @user
     @transaction.quantity = params[:count]
     @transaction.price = (@transaction.quantity * @product.price).round(2)
+    @transaction.save
     if @transaction.save
       redirect_to products_path
     else
