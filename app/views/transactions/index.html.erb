@@ -30,9 +30,9 @@
     <div class="col-12">
       <h3 class="pb-3 border-bottom">Total de la commande</h3>
       <div class="order-details">
-        <p><span>Sous-total</span><span><%= Transaction.sum(:price)%> €</span></p>
+        <p><span>Sous-total</span><span><%= (Transaction.sum(:price)).truncate(2)%> €</span></p>
         <p><span>Livraison</span><span>10€</span></p>
-        <p><span><strong>Total (TVA incluse)</strong></span><span><strong><%= Transaction.sum(:price) + 10%> €</span></strong></p>
+        <p><span><strong>Total (TVA incluse)</strong></span><span><strong><%= (Transaction.sum(:price) + 10).truncate(2)%> €</span></strong></p>
       </div>
       <%= link_to "Commander →", root_path, class:"btn-normal btn-primary" %>
     </div>
