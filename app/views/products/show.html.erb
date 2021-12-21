@@ -25,35 +25,16 @@
   </div>
 </div>
 
-<div class="col-12 col-md4">
-  <div class= "card-product border p-3 rounded">
-    <div class="row justify-content-right">
-      <%= image_tag @product.shop.logo_url, class: "rounded-circle", alt: "image-shop" %>
-      <h3><%=@product.shop.brand_name %></h3>
-    </div>
-  </div>
-</div>
+<div class= " container card-shop row">
+    <div class="col-12 col-md-6">
+     <div class="carte-shop" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.3)), url(<%= @product.shop.banner_url%>);">
+     <%= link_to "", shop_path(@shop) %>
+      <div class= "info-shop">
+        <%= image_tag @product.shop.logo_url, class: "img_cercle", alt: "image-shop" %>
 
-<section class="products py-5">
-  <div class= "container">
-    <h3>Les clients ont aussi aimé</h3>
-      <div class= "row mt-5">
-        <% @products.each do |product| %>
-          <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <%= link_to product_path(product), class: "link-product" do  %>
-            <div class="card" >
-              <%= image_tag product.image_url %>
-              <div class="card-body">
-                <h3 class="card-title"><%= product.name%></h3>
-                <p class="card-text"><%= product.category%></p>
-                <p class="card-text"><%= product.description.truncate(60) %></p>
-                <p class="price"><strong><%= product.price %>€</strong></p>
-              </div>
-            </div>
-            <% end %>
-          </div>
-        <% end %>
+        <div><h3><%=@product.shop.brand_name %></h3></div>
       </div>
-  </div>
-</section>
+    </div>
+    </div>
+</div>
 </main>
