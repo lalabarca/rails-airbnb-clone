@@ -8,7 +8,7 @@ const hoverCategory = () => {
     });
     img.addEventListener("mouseout", (event) => {
       event.currentTarget.firstElementChild.style.transform = 'scale(1)';
-      document.querySelector(".category-container p").style.opacity = 0;
+      event.currentTarget.children[2].style.opacity = 0;
     });
   });
 };
