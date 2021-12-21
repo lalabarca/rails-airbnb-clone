@@ -2,3 +2,61 @@
 .products {
   background-color: $l-first;
 }
+
+.category-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 8px rgba($color: #000000, $alpha: 0.2);
+  a {
+    color: #ffffff;
+    position: absolute;
+    text-decoration: none;
+    left: 0; top:0; bottom: 0; right: 0;
+    z-index: 1;
+  }
+  p {
+    text-shadow: 0 0 1px rgba($color: #000000, $alpha: 0.8);
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    color: white;
+    opacity: 0;
+  }
+  &:hover .category-img-holder:before {
+    background-color: rgba($color: $first, $alpha: 0.3);
+  }
+}
+
+.category-img-holder {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    left: 0;
+  }
+}
+
+.link-category {
+  color: $gray;
+  font-size: 1.6rem;
+  font-family: 'Libre Baskerville', sans-serif;
+  margin-top: 1.7rem;
+  display: inline-block;
+}
