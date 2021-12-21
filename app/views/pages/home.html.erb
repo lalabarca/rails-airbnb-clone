@@ -27,11 +27,50 @@
   </div>
 </div>
 <main>
+  <section class="py-5">
+  <div class="container">
+    <h2>Nos catégories de produits</h2>
+    <div class="row mt-5">
+      <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+        <div class="category-container">
+            <div class="category-img-holder"  style="background-image: url(https://images.unsplash.com/photo-1624984673204-99b3d99936d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80)"></div>
+            <%= link_to "", products_path(query: "shampoing") %>
+            <p>Shampoings</p>
+        </div>
+         <%= link_to "Shampoings", products_path(query: "shampoing"), class:"link-category" %>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+        <div class="category-container">
+            <div class="category-img-holder"  style="background-image: url(https://images.unsplash.com/photo-1619451334792-150fd785ee74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1001&q=80)"></div>
+            <%= link_to "", products_path(query: "masque") %>
+            <p>Masques</p>
+        </div>
+         <%= link_to "Masques", products_path(query: "masque"), class:"link-category" %>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+        <div class="category-container">
+            <div class="category-img-holder"  style="background-image: url(https://images.unsplash.com/photo-1608571423539-e951b9b3871e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&q=80)"></div>
+            <%= link_to "", products_path(query: "huile") %>
+            <p>Huiles</p>
+        </div>
+         <%= link_to "Huiles", products_path(query: "huile"), class:"link-category" %>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+        <div class="category-container">
+            <div class="category-img-holder"  style="background-image: url(https://cdn.pixabay.com/photo/2020/03/25/12/23/cream-4967111_1280.jpg)"></div>
+            <%= link_to "", products_path(query: "beurre") %>
+            <p>Beurres</p>
+        </div>
+         <%= link_to "Beurres", products_path(query: "beurre"), class:"link-category" %>
+      </div>
+    </div>
+  </div>
+  </section>
   <section class="products py-5">
     <div class="container">
       <h2>Les produits du moment</h2>
       <div class="row mt-5">
-         <% @products.first(4).each do |product| %>
+         <% @products.last(4).each do |product| %>
           <div class="col-12 col-md-6 col-lg-3 mb-4">
           <%= link_to product_path(product), class:"link-product" do %>
             <div class="card">
