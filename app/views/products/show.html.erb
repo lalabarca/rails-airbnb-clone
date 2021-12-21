@@ -50,7 +50,8 @@
     </div>
   </div>
 </div>
-<div class= " container card-shop row">
+<section class="container">
+  <div class= "card-shop row">
     <div class="col-12 col-md-6">
      <div class="carte-shop" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.3)), url(<%= @product.shop.banner_url%>);">
      <%= link_to "", shop_path(@shop) %>
@@ -62,6 +63,7 @@
     </div>
     </div>
 </div>
+</section>
 <section class="row bg-light py-5">
     <div class="container">
       <h2>Les autres produits de <%= @product.shop.brand_name %></h2>
