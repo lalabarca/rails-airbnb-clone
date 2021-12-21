@@ -1,0 +1,40 @@
+<div class="container py-5">
+  <h1>Mon panier</h1>
+  <div class="row justify-content-center">
+    <div class="col-12">
+    <% @transactions.each do |transaction| %>
+      <article class="d-flex justify-content-between align-items-center mt-4 my-product">
+        <div class="body-product">
+          <%= link_to "", product_path(transaction.last.first.product) %>
+          <figure>
+            <%= image_tag transaction.last.first.product.image_url, alt: "photo product" %>
+          </figure>
+          <ul>
+            <h2><strong><%= transaction.last.first.product.name %></strong></h2>
+            <li class="text-secondary"><%=  transaction.last.first.product.category %></li>
+            <li class="text-secondary"><%= transaction.last.map(&:quantity).sum %></li>
+            <li><strong><%= transaction.last.map(&:price).sum %> €</strong></li>
+            <li><%= link_to transaction_path(transaction.last.first), class:"btn-delete", data: {confirm: "Voulez-vous supprimer cet article ?"}, method: :delete do %><i class="far fa-trash-alt"></i><% end %></li>
+          </ul>
+        </div>
+        <div class="actions">
+          <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+          <span id="counter" data-count="<%= transaction.last.map(&:quantity).sum %>"><%= transaction.last.map(&:quantity).sum %></span>
+          <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+        </div>
+      </article>
+    <% end %>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <h3 class="pb-3 border-bottom">Total de la commande</h3>
+      <div class="order-details">
+        <p><span>Sous-total</span><span><%= Transaction.sum(:price)%> €</span></p>
+        <p><span>Livraison</span><span>10€</span></p>
+        <p><span><strong>Total (TVA incluse)</strong></span><span><strong><%= Transaction.sum(:price) + 10%> €</span></strong></p>
+      </div>
+      <%= link_to "Commander →", root_path, class:"btn-normal btn-primary" %>
+    </div>
+  </div>
+</div>
