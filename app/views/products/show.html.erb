@@ -6,22 +6,72 @@
         <%= image_tag @product.image_url, alt: "photo produit" %>
       </figure>
     </div>
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-4" data-controller='add-to-cart'>
       <div class="card-product-infos">
         <h1><%=@product.name %></h1>
         <h2><%=@product.shop.brand_name %></h2>
         <p class="price-product"><strong><%= @product.price  %>€</strong></p>
         <p class="border-top border-dark py-3"><%= @product.description %></p>
-        <div class="flex-between">
-          <div class="actions">
-            <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
-            <span id="counter" data-count="1">1</span>
-            <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+        <div class="actions">
+          <a class="btn round-bordered incrementer minus" data-offset="-1">-</a>
+          <span id="counter" data-count="1"  data-add-to-cart-target="counter">1</span>
+          <a href="#" class="btn round-bordered incrementer" data-offset="1">+</a>
+        </div>
+        <%= link_to "Ajouter au panier", product_path(@product), class: "btn-normal btn-primary", :"data-toggle" => "modal", :"data-target" => "#exampleModal" %>
+      </div>
+    <%# MODAL %>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel"><i class="fas fa-check-circle"></i>Ajouté au panier</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <figure>
+                <%= image_tag @product.image_url, alt: "photo product" %>
+              </figure>
+               <ul>
+                 <h3><strong><%= @product.name %></strong></h3>
+                 <li class="text-secondary"><%= @product.category %></li>
+                 <li id="modal-quantity" class="text-secondary"> 1</li>
+                 <li id="modal-price"><strong><%= @product.price %> €</strong></li>
+               </ul>
+            </div>
+            <div class="modal-footer">
+              <%= link_to "Continuer mes achats", products_path, class: "btn-normal btn-secondary" %>
+              <%= link_to "Voir mon panier", product_transactions_path(@product), method: :post, class: "add-to-cart btn-normal btn-primary", :"data-action" => "click->add-to-cart#addCart", :"data-add-to-cart-target" =>"button" %>
+            </div>
           </div>
         </div>
-        <%= link_to "Ajouter au panier", product_transactions_path(@product), method: :post, class: "mt-3 btn btn-primary" %>
       </div>
     </div>
   </div>
 </div>
+<section class="row bg-light py-5">
+    <div class="container">
+      <h2>Les autres produits de <%= @product.shop.brand_name %></h2>
+      <div class="row mt-5 ">
+        <% @product.shop.products.each do |product| %>
+        <% unless @product.id == product.id %>
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+           <%= link_to product_path(product), class:"link-product" do %>
+            <div class="card">
+
+              <%= image_tag product.image_url %>
+                <h3 class="card-title"><%= product.name %></h3>
+                <p class="card-text"><%= product.category %></p>
+                <p class="card-text"><%= product.description.truncate(60) %></p>
+                <p class="price"><strong><%= product.price %> €</strong></p>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</section>
 </main>

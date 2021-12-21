@@ -1,0 +1,19 @@
+.btn-normal {
+  border-radius: 50px;
+  padding: 10px 1rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.btn-primary {
+  background-color: $fourth;
+  color: white;
+  border-color: $fourth;
+  &:hover, &:focus {
+    background-color: darken($color: $fourth, $amount: 10%);
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(0, 169, 200, 0.5);;
+  }
+}

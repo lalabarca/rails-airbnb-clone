@@ -34,7 +34,7 @@
           <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
-        <li><a href="#" class="nav-link"><i class="fas fa-shopping-bag"></i></a></li>
+        <li><a href="#" class="nav-link nav-cart"><i class="fas fa-shopping-bag"></i><span><%= Transaction.sum(:quantity) %></span></a></li>
 
     </ul>
 
