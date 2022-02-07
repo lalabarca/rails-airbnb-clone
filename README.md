@@ -8,7 +8,7 @@ This is a very simple project I worked on during 5 days with [Mylène Desroses](
 **Checkout [website](https://karib-hair.herokuapp.com/)**
 
 ### Main user journey
-An user go on our marketplace looking for a product, a shampoo for example, they either type "shampooing"(since it's a french website) in the search bar or click o, the "Shampooing" category on the homepage.
+An user go on our marketplace looking for a product, a shampoo for example, they either type "shampooing"(since it's a french website) in the search bar or click on the "Shampooing" category on the homepage.
 Either way they will find a list all shampoos on the website then they can choose the one they want, click on the product card and be brought on the product page with all the details: picture of the product, a description, the shop that sells the product or other related product. On this page, the user can choose the quantity they want then add the product(s) in their cart.
 If they click on "Voir mon panier" (See my cart), they will be able to see all their items, change the quantity then proceed to validation of the cart.
 
