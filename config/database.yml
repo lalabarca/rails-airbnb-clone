@@ -80,7 +80,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
   database: rails_airbnb_clone_production
   username: rails_airbnb_clone
   password: <%= ENV['RAILS_AIRBNB_CLONE_DATABASE_PASSWORD'] %>
